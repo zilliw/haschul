@@ -1,4 +1,4 @@
-<template>
+<template v-slot:TheMenu>
  <v-app-bar
       app
       color="#42b883"
@@ -15,14 +15,16 @@
         </v-btn>
 
         <v-spacer></v-spacer>
-        <v-avatar
-          class="mr-10"
-          color="grey darken-1"
-          size="32"
-        ></v-avatar>
-        <v-responsive max-width="260">
+        <v-avatar>
+             <img
+                src="../../../public/images/hab.jpg"
+                alt="avatar"
+            >
+         </v-avatar>
+
+        <v-responsive max-width="260" class="avatar">
           
-          <v-text-field
+          <v-text-field 
             dense
             flat
             hide-details
@@ -48,3 +50,12 @@
     }),
   }
 </script>
+
+<style scoped>
+
+    .avatar {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+</style>

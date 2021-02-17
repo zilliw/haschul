@@ -1,6 +1,6 @@
 <template>
-<v-app>
     <v-main class="grey lighten-3" >
+
         <v-row  class="themes">
           <v-col cols="2">
             <v-sheet>
@@ -45,15 +45,12 @@
           </v-col>
         </v-row>
     </v-main>
-</v-app>
-    
-
-
-
 </template>
 
 <script>
   export default {
+    name: 'TheThemeMenu',
+
     data: () => ({
       links: [
         'Se connecter',
@@ -84,5 +81,8 @@
       padding-top: 10px;
       padding-right:10px;
       font-size: 20px;
+    }
+    .container {
+      display:flex;
     }
 </style>

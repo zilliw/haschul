@@ -1,13 +1,17 @@
 <template>
-        <v-app id="inspire">
+        <v-app>
             <router-view/>
         </v-app>
 </template>
 
 <style scoped>
-    .v-application {
+    .v-app {
         font-family: 'Roboto', sans-serif !important;
         font-size: 36px;
     }
-
+        .main{
+        background-color:#fafbfc;
+        }
 </style>
+
+

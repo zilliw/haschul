@@ -1,38 +1,38 @@
-<template>
-    <div>
-         <router-view></router-view>
-         <component :is="HomeComponent" />
-         <Home-menu-item> </Home-menu-item>
-    </div>
-
+<template class="container">
+    <v-layout>
+        <TheMenu>
+        </TheMenu>
+        <v-col>
+                <v-row >
+                        <TheThemeMenu>
+                        </TheThemeMenu>
+                </v-row>
+        </v-col>
+    </v-layout>
 </template>
 
 <script>
-    import HomeMenu from './HomeMenu.vue'
-    import HomeMenuItem from './HomeMenuItem.vue'
+import TheThemeMenu from './TheThemeMenu.vue'
+import TheMenu from './TheMenu.vue'
 
-    export default {
-    name:'Home',
+export default {
+    name: 'Home',
 
-    components: {
-        HomeMenu,
-        HomeMenuItem
-    },
-
-    computed: {
-      HomeComponent () {
-        return this.$route.name
-      }
-    },
-
-
+    components: { 
+        TheThemeMenu,
+        TheMenu
+        }
   }
 </script>
 
-<style scoped>
-    .themes {
-      padding-left: 10px;
-      padding-top: 10px;
-      padding-right:10px;
-    }
+<style >
+.container {
+        display: flex;
+        max-width: 100%;
+        max-height: 100%;
+}
+.item {
+        display: flex;
+        height: 100%;
+        }
 </style>
