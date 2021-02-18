@@ -1,26 +1,20 @@
 <template class="container">
     <v-layout>
-        <TheMenu>
-        </TheMenu>
-        <v-col>
-                <v-row >
-                        <TheThemeMenu>
-                        </TheThemeMenu>
-                </v-row>
-        </v-col>
+        <TheHeader/>
+        <TheMenu/>
     </v-layout>
 </template>
 
 <script>
-import TheThemeMenu from './TheThemeMenu.vue'
 import TheMenu from './TheMenu.vue'
+import TheHeader from './TheHeader.vue'
 
 export default {
     name: 'Home',
 
     components: { 
-        TheThemeMenu,
-        TheMenu
+        TheMenu,
+        TheHeader
         }
   }
 </script>

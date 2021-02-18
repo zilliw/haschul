@@ -1,6 +1,6 @@
 <template>
         <v-app>
-            <router-view/>
+            <router-view></router-view>
         </v-app>
 </template>
 
@@ -9,7 +9,7 @@
         font-family: 'Roboto', sans-serif !important;
         font-size: 36px;
     }
-        .main{
+    .main{
         background-color:#fafbfc;
         }
 </style>
