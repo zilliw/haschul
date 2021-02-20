@@ -63,6 +63,6 @@ import TheMenu from './TheMenu.vue'
         padding-left: 15px;
     }
     .p {
-                font-size: 14px;
+        font-size: 14px;
     }
 </style>
