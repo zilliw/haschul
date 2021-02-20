@@ -1,14 +1,16 @@
-<template v-slot:TheMenu>
- <v-app-bar
-      app
-      color="#42b883"
-      flat
-      dark
-    > 
+<template>
+  <v-container mb-15>
+    <v-app-bar
+    app    
+    color="#42b883"
+    flat
+    dark>
+    
+        <v-img max-height="100%" max-width="125px" position="left" contain src="../../../public/images/vuejs-logo.png"></v-img>
+        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-    <v-img max-height="100%" max-width="150px" position="left" contain src="../../../public/images/vuejs-logo.png"></v-img>
 
-          <v-spacer></v-spacer>
+    <v-spacer></v-spacer>
           
           <v-text-field
             label="Rechercher un auteur, un thème..."
@@ -19,35 +21,48 @@
             solo-inverted
           ></v-text-field>
           <v-spacer></v-spacer>
-  
 
-        <v-btn color="transparent" elevation="0">
-            <v-icon > mdi-bell
-
-            </v-icon>
+        <v-btn icon><v-icon > mdi-bell </v-icon> </v-btn>
+        <v-btn icon><v-icon > mdi-mail </v-icon> </v-btn>
+        <v-btn icon >
+                <v-avatar>
+                        <img
+                        src="../../../public/images/hab.jpg"
+                        alt="avatar"
+                        >   
+                </v-avatar>
         </v-btn>
-
-        <v-btn color="transparent" elevation="0">
-            <v-icon > mdi-mail
-
-            </v-icon>
-        </v-btn>
-
-        <v-avatar label="avatar">
-             <img
-                src="../../../public/images/hab.jpg"
-                alt="avatar"
-            >
-         </v-avatar>
     </v-app-bar>
 
+    <v-navigation-drawer
+      v-model="drawer"
+      fixed
+      temporary
+    >
+        <TheMenu/>
+    </v-navigation-drawer>
+  </v-container>
 </template>
+
+<script>
+import TheMenu from './TheMenu.vue'
+
+  export default {
+        components: { 
+            TheMenu
+        },
+
+    data: () => ({ drawer: null }),
+  }
+</script>
 
 <style scoped>
 
-    .avatar {
-        padding-right: 10px;
-        padding-left: 10px;
+    .icon {
+        padding-right: 15px;
+        padding-left: 15px;
     }
-
+    .p {
+                font-size: 14px;
+    }
 </style>

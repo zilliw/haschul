@@ -1,17 +1,31 @@
 <template>
         <v-app>
-            <router-view></router-view>
+
+            <TheHeader/>
+            <router-view/>
+        
         </v-app>
 </template>
 
-<style scoped>
-    .v-app {
-        font-family: 'Roboto', sans-serif !important;
-        font-size: 36px;
-    }
-    .main{
-        background-color:#fafbfc;
+<script>
+import TheHeader from './views/common/TheHeader.vue'
+
+export default {
+    components: { 
+        TheHeader
         }
-</style>
+  }
+</script>
+
+<style scoped>
+    .app {
+        font-family: 'Roboto', sans-serif !important;
+        font-size: 14px;
+    }
+
+    .p {
+                font-size: 14px;
+    }
+</style>>
 
 
