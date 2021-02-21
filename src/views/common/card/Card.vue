@@ -35,7 +35,7 @@
             justify="center"
           >
             <div class="display-3">
-              {{ slide }} Slide
+              {{ slide.item }} Slide
             </div>      
           </v-row>
         </v-sheet>
@@ -53,8 +53,9 @@
           <v-rating
                 readonly="true"
                 background-color="#41b29a"  
-                color="#41b29a"
-                small > 
+                color="#yellow"
+                small
+                v-model="slide" > 
           ></v-rating>
                       <span class="primary--text subtitle-2">64<v-btn icon small><v-icon>mdi-thumb-up</v-icon></v-btn></span>
         </v-list-item-action>

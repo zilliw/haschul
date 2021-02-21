@@ -24,14 +24,8 @@
 
         <v-btn icon><v-icon > mdi-bell </v-icon> </v-btn>
         <v-btn icon><v-icon > mdi-mail </v-icon> </v-btn>
-        <v-btn icon >
-                <v-avatar>
-                        <img
-                        src="../../../public/images/hab.jpg"
-                        alt="avatar"
-                        >   
-                </v-avatar>
-        </v-btn>
+        <v-btn color="primary" small > Se connecter</v-btn>
+
     </v-app-bar>
 
     <v-navigation-drawer

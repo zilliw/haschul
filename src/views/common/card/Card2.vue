@@ -10,7 +10,7 @@
     height="50"
     dark
     position="center"
-    >TOP 10 DES ARTICLES</v-system-bar>
+    >DERNIERES PUBLICATIONS</v-system-bar>
 
     <v-carousel
       :continuous="false"

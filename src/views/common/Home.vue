@@ -1,8 +1,10 @@
 <template>
-<div>
-  <Card/>
-    <Card2/>
-  </div>
+
+<v-container class="cards">
+                <Card/>
+                <Card2/>
+</v-container>
+
 </template>
 
 <script>
@@ -15,3 +17,13 @@ import Card2 from './card/Card2.vue'
         },
   }
 </script>
+
+<style scoped>
+
+        .cards {
+                display:flex;
+                flex-direction: row;
+        }
+
+</style>
+
